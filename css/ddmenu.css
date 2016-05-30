@@ -228,3 +228,16 @@ border-right:1px solid #999;
 /* useful when http://www.menucool.com/ddmenu/one-menu-for-all-pages */
 #ddmenuLink {display:none;}
 
+
+
+
+@media screen and (max-width: 900px) {
+  #ddmenu {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
