@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	 line-height: 1.6875;
 }
 
 .wrapper {
@@ -15,6 +16,16 @@
 	height: 660px;
 	width: 100%;
 }
+.sliderBackground1{
+  background-image: url('../images/conferences.jpg');
+  background-size: cover;
+  background-position: center;
+	position: relative;
+  height: 250px;
+	width: 100%;
+	margin-top:30px;
+}
+
 	
 #content2 {
 	text-align:center;
@@ -49,24 +60,24 @@ opacity: 0.5;
 
 }
 #content2 h1 {
-
-padding-top:-26px;
+margin-left:-10px;
+padding-top:40px;
 position:absolute;
 text-align:center;
 width:100%;
 
 }
- p.one  {
+
+p.one  {
 	
-	margin-left:15%;
-	margin-right:15%;
-	margin-top:25px;
+	margin-left:13%;
+	margin-right:13%;
+	margin-top:40px;
 	padding-top:15px;
 	color:black;
 	position:absolute;
+	max-width:80%;
 
-	
-	
 
 }
 
@@ -75,9 +86,11 @@ p.two{
 	margin-left:10%;
 	margin-right:10%;
 	margin-top:14px;
-	padding-top:70px;
+	padding-top:90px;
 	color:black;
 	position:absolute;
+
+	 
 	
 
 }
@@ -89,25 +102,54 @@ button {
     -webkit-appearance:none;
     cursor: pointer;
     color: white;
-    padding: 15px 32px;
-	margin-top:250px;
+    padding: 9px 24px;
+	margin-top:350px;
 	margin-right:-300px;
 	margin-left:-72px;
-   
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
 	position:absolute;
+
 
 }
 
 #celi {
-	height:610px;
+	height:620px;
 	width:100%;
+	background-image: url('../images/z1.jpg');
+	background-size: cover;
+  background-position: center;
+	position: relative;
+	z-index: -1;
+}
+#celi::after{
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-#cluster {
-height:610px;
+#celi1 {
+	height:620px;
 	width:100%;
+
+}
+#celi img {
+	max-width:400px;
+	max-height:350px;
+	margin-top: 100px;
+  margin-left: 30%;
+  float: left;
+	position:relative;
+}
+
+#celi background-image {
+	margin-top:30px;
+	padding-top:30px;
 
 }
 
@@ -115,7 +157,7 @@ height:610px;
 .navbar{
 	width:100%;
 	height:100%;
-	background:lightgrey;
+	
 	text-align:center;
 }
 
@@ -176,23 +218,14 @@ height:610px;
 	color:#fff;
 }
 
-#celi {
-	height:610px;
-	width:100%;
-	background-color:grey;
-}
-
-
-
-
 
 
 
 
 
 .header {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	visibility: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    visibility: hidden;
   background-color: transparent;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
@@ -201,22 +234,29 @@ height:610px;
 }
  
 .header ul {
+  font-size: 14px;
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
   background-color: transparent;
 }
- 
+.header ul ul li{
+  font-size: 12px;
+    margin-left: 15px;
+    padding: 1.5px 1.5px;
+}
+.header ul li{
+  padding: 5px 5px;
+}
 .header li a {
   display: block;
-  padding: 20px 20px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
   color: #000;
 }
-.header li a:active, .header li a:hover{
-	color: #84D9F5;
+.header li a:active .header li a:hover{
+    color: #84D9F5 ;
 }
  
 .header li a:hover {
@@ -297,8 +337,6 @@ height:610px;
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-
 
 
 
