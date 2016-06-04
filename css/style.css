@@ -7,7 +7,7 @@
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-  max-width: 1110px;
+	max-width: 1110px;
 }
 .sliderBackground{
   overflow: hidden;
@@ -32,12 +32,13 @@
 	
 #content2 {
 	text-align:center;
-  float: left;
-  overflow: hidden;
+	float: left;
+	overflow: hidden;
 	margin:0;
 	width:100%;
 	background-image: url('../images/pozadina2.jpg');
-	background-size: 100% 100%;
+	background-size: cover;
+  background-position: center;
 	position: relative;
 	z-index: 1;
 }
@@ -54,21 +55,28 @@
 }
 #content2 h3 {
 
-padding-top:55px;
-margin-right:20px;
+padding-top:80px;
 font-size:15px;
 text-align:center;
 opacity: 0.5;
+float:center;
+margin-left:-21px;
+overflow:hidden;
+position:relative;
+
 
 
 
 }
 #content2 h1 {
-margin-left:-10px;
+margin-left:-6px;
 padding-top:40px;
-position:absolute;
+position:relative;
 text-align:center;
 width:100%;
+float:left;
+overflow:hidden;
+font-size:22px;
 
 }
 
@@ -76,11 +84,14 @@ p.one  {
 	
 	margin-left:13%;
 	margin-right:13%;
-	margin-top:40px;
+	margin-top:50px;
 	padding-top:15px;
 	color:black;
-	position:absolute;
+	position:relative;
 	max-width:80%;
+	float:left;
+	overflow:hidden;
+
 
 
 }
@@ -89,10 +100,12 @@ p.two{
 	
 	margin-left:10%;
 	margin-right:10%;
-	margin-top:14px;
-	padding-top:90px;
+
+	padding-top:50px;
 	color:black;
-	position:absolute;
+	float:left;
+	overflow:hidden;
+	position:relative;
 
 	 
 	
@@ -107,132 +120,30 @@ button {
     cursor: pointer;
     color: white;
     padding: 9px 24px;
-	margin-top:350px;
-	margin-right:-300px;
-	margin-left:-72px;
+	margin-top:80px;
+	margin-left:-25px;
+	margin-bottom:130px;
     display: inline-block;
     font-size: 14px;
-	position:absolute;
+	float:center;
+	overflow:hidden;
+	position:relative;
 
 
 }
 
 #celi {
-  float: left;
+
   overflow: hidden;
 	width:100%;
-	background-image: url('../images/z1.jpg');
-	background-size: cover;
-  background-position: center;
-}
-.zastonie {
-  float: left;
-  overflow: hidden;
-  width:100%;
-}
-.left{
-  float: left;
-  width: 50%;
-  overflow: hidden;
-}
-.right{
-  float: left;
-  width: 50%;
-  overflow: hidden;
-}
-
-/**/
-
-.clear{
-  clear: both;
-}
-#celi1 {
-
-  float: left;
-  overflow: hidden;
-	width:100%;
-
-}
-#celi img {
-	max-width:400px;
-	max-height:350px;
-	margin-top: 100px;
-  margin-left: 28%;
-  float: left;
 	position:relative;
 }
 
-#celi background-image {
-	margin-top:30px;
-	padding-top:30px;
-
-}
-
-#celi h3 {
-	
-	float:left;
-	margin-left:170px;
-	margin-top:120px;
-	font-size:13px;
-	opacity:0.5;
-}
-
-#celi h1 {
-
-	float:left;
-	margin-left:-70px;
-	margin-top:150px;
-	font-size:25px;
-}
-
-.eden {
-	margin-left:763px;
-	margin-right:100px;
-	margin-top:210px;
-	font-size:16px;
-}
-
-.dva {
-	margin-left:762px;
-	margin-right:100px;
-	margin-top:40px;
-	font-size:15px;
-	
-}
-
-#cluster {
-  float: left;
-  overflow: hidden;
-	background-image: url('../images/krug.jpg');
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	z-index: 1;
-	
-
-}
-#cluster::after{
-  content: "";
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-
-
-
-
-
-
 .navbar{
 	width:100%;
-	height:100%;
+	overflow:hidden;
+
 	
-	text-align:center;
 }
 
 .navbar .pr{
@@ -244,6 +155,8 @@ button {
 	text-decoration:none;
 	font-size:20px;
 	padding: 20px 0;
+	overflow:hidden;
+
 	
 }
 .navbar .pr1{
@@ -255,6 +168,8 @@ button {
 	text-decoration:none;
 	font-size:20px;
 	padding: 20px 0;
+	overflow:hidden;
+	
 }
 
 .navbar .pr2{
@@ -266,6 +181,9 @@ button {
 	text-decoration:none;
 	font-size:20px;
 	padding: 20px 0;
+	overflow:hidden;
+	
+	
 }
 .navbar .pr span{
 	display:block;
@@ -276,7 +194,6 @@ button {
 .navbar .pr2 span{
 	display:block;
 }
-
 
 
 .navbar .pr:hover,.navbar .active{
@@ -292,9 +209,109 @@ button {
 	color:#fff;
 }
 
+.zastonie {
+  float: left;
+  overflow: hidden;
+  width:100%;
+  position:relative;
+}
+.left{
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  position:relative;
+  background-image: url('../images/z1.1.jpg');
+  background-size: cover;
+  
+}
+.left img {
+	width:55%;
+	overflow:hidden;
+  float: none;
+  margin-left: 20%;
+
+}
+.right{
+ 
+  width: 50%;
+  margin-right: 100px;
+  overflow: hidden;
+  position:relative;
+}
+
+.right h3 {
+	
+	text-align:left;
+	font-size:15px;
+	opacity:0.5;
+	padding:20px;
+	
+
+}
+
+.right h1 {
+	text-align:left;
+	padding:10px;
+	margin-top:20px;
+	font-size:25px;
+
+}
+
+#prv{
+text-align:left;
+padding:15px;
+font-size:18px;
+
+
+}
+
+#vtor {
+text-align:left;
+padding:10px;
+font-size:14px;
+
+
+}
+
+/**/
+
+.clear{
+  clear: both;
+}
 
 
 
+#celi1 {
+
+  float: left;
+  overflow: hidden;
+	width:100%;
+
+}
+
+#cluster {
+  float: left;
+  overflow: hidden;/*
+	background-image: url('../images/kru.jpg');
+	background-size: cover;
+	background-position: center;*/
+  width: 100%;
+  position: relative;
+	
+
+}/*
+#cluster::after{
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+*/
 
 
 .header {
@@ -415,6 +432,79 @@ button {
 
 
 
+.style_prevu_kit
+{
+  overflow: hidden;
+  margin: 0 auto;
+    display:inline-block;
+    border:0;
+    width:150px;
+    height:150px;
+    position:relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+
+.style_prevu_kit:hover
+{
+    box-shadow: 0px 0px 140px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
+#kompanii{
+  position: relative;
+  margin:auto;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
+#kompaniiContext{
+  padding-top: 3%;
+  padding-bottom:3%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#kompanii .style_prevu_kit a img{
+  height:90%;
+  width:90%;
+  margin:5%; 
+  align-items:center;
+}
+/* VAKA BESE PRETHODNO   #kompanii .style_prevu_kit a img{
+  height:50%;
+  width:90%;
+  margin-top:30%; 
+  margin-left:5%; 
+  margin-right:5%; 
+  align-items:center;
+}*/
+
+#footer{
+    float: left;
+    overflow: hidden;
+    width: 100%;
+  }
+
 
 @media screen and (min-width: 900px) {
   .header li {
@@ -430,6 +520,17 @@ button {
   }
   .header .menu-icon {
     display: none;
+  }
+  .contact-left{
+    margin: 0 auto;
+    width: 40%;
+    float: left;
+    
+  }
+  .contact-right{
+    margin-right: 3px;
+    width: 60%;
+    float: left;
   }
 }
 
@@ -464,6 +565,10 @@ button {
     #ninja-slider-prev, #ninja-slider-next {
         display:none;
     }
+
+  .navbar .pr, .navbar .pr1, .navbar .pr2{
+    width: 100%
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -474,12 +579,24 @@ button {
   .contact-right{
   	float: none;
   	width: 100%;
+    margin-right: 3%;
   	position: absolute;
   	margin:0 auto;
   }
   .contact-left{
   	float: none;
   	width: 100%;
+  }
+  #content2 {
+    background: none;
+  }
+  #zastonie .wrapper .left{
+    visibility: hidden;
+    height: 0px;
+  }
+  #zastonie .wrapper .right{
+    width: 100%;
+    float: none;
   }
 }  
 
@@ -491,17 +608,18 @@ height: 7em;
   }
 
   .contact-left{
-  	padding-top: 10%;
-  	position: absolute;
+  	padding-top: 8%;
   	margin: 0 auto;
   	width: 100%;
+    float: none;
+
   }
   .contact-right{
-  	position: absolute;
   	width: 100%;
   	margin-top: 300px;
+    margin-right: 3%;
   	float: none;
-  	position: center;
+
   }
   #footer{
     height: 670px;
@@ -514,9 +632,48 @@ height: 10em;
   }
   #footer{
     height: 380px;
+    float: left;
+    overflow: hidden;
+    width: 100%;
   }
   .contact-right{
+    width: 50%;
+    float: right;
+    margin-top: 3%;
+    margin-right: 3%;
+  }
+  .contact-left{
+    width: 50%;
+    float: left;
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 950px) {
+  #kompaniiContext{
+    padding-top: 3%;
+  }
+  .style_prevu_kit{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #kompaniiContext{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+  }
+}
 
-float:right;
+@media screen and (max-width: 330px) {
+  .style_prevu_kit{
+    width: 70px;
+    height: 70px;
+  }
+  #kompaniiContext{
+    padding: 10%;
+  }
+  .contact-right{
+    margin-top: 250px;
   }
 }

@@ -1,11 +1,10 @@
 #footer {
 	    background: url('../images/3.jpg') no-repeat;
 		background-size: cover;
-            background-position: center;
-           margin:0 auto;
-            left: 0;
-            right: 0;
-            width:100%;
+        background-position: center;
+        margin:0 auto;
+        overflow: hidden;
+        position: relative;
         }
 
 #footerContainer {
@@ -14,21 +13,21 @@
 	    margin:0 auto;            
         }
 
-.contact-left{
-
+/*.contact-left{
+    float: left;
+    overflow: hidden;
 margin: 0px;
-z-index: 1;
 
 
 }
 
 .contact-right{
+    float: left;
 width: 60%;
 overflow:hidden;
-z-index: 1;
 
 
-}
+}*/
 
 
 .form{
