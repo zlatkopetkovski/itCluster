@@ -148,66 +148,45 @@ button {
 
 .navbar .pr{
 	display:inline-block;
-	background:#0080ff;
+	background:#5F54BA;
 	color:#fff;
 	width: 33%;
-	transition:background .5s;
-	text-decoration:none;
-	font-size:20px;
-	padding: 20px 0;
+	font-size:18px;
+	padding: 20px 25px;
 	overflow:hidden;
+	text-align:center;
+	border-radius: 0px 0px 100px 0px;
 
 	
 }
 .navbar .pr1{
 	display:inline-block;
-	background:#0080ff;
+	background:#06A7D5;
 	color:#fff;
 	width: 33%;
-	transition:background .5s;
-	text-decoration:none;
-	font-size:20px;
-	padding: 20px 0;
+	font-size:18px;
+	padding: 20px 25px;
 	overflow:hidden;
+	text-align:center;
+	border-radius:100px 0px 100px 0px;
 	
 }
 
 .navbar .pr2{
 	display:inline-block;
-	background:#0080ff;
+	background:#2CE0BD;
 	color:#fff;
 	width: 33%;
-	transition:background .5s;
-	text-decoration:none;
-	font-size:20px;
-	padding: 20px 0;
+	font-size:18px;
+	padding: 20px 25px;
 	overflow:hidden;
-	
-	
-}
-.navbar .pr span{
-	display:block;
-}
-.navbar .pr1 span{
-	display:block;
-}
-.navbar .pr2 span{
-	display:block;
+	text-align:center;	
+border-radius:100px 0px 0px 0px;	
 }
 
 
-.navbar .pr:hover,.navbar .active{
-	background:orange;
-	color:#fff;
-}
-.navbar .pr1:hover,.navbar .active{
-	background:orange;
-	color:#fff;
-}
-.navbar .pr2:hover,.navbar .active{
-	background:orange;
-	color:#fff;
-}
+
+
 
 .zastonie {
   float: left;
@@ -273,8 +252,6 @@ font-size:14px;
 
 }
 
-/**/
-
 .clear{
   clear: both;
 }
@@ -290,16 +267,17 @@ font-size:14px;
 }
 
 #cluster {
-  float: left;
-  overflow: hidden;/*
-	background-image: url('../images/kru.jpg');
+	float:left;
+	overflow: hidden;
+	background-image: url('../images/krug.jpg');
 	background-size: cover;
-	background-position: center;*/
-  width: 100%;
-  position: relative;
+	background-position: center;
+	width: 100%;
+	position: relative;
+	height:410px;
 	
+}
 
-}/*
 #cluster::after{
   content: "";
   position: absolute;
@@ -311,7 +289,7 @@ font-size:14px;
   z-index: -1;
 }
 
-*/
+
 
 
 .header {
@@ -631,7 +609,7 @@ width: 13em;
 height: 10em;
   }
   #footer{
-    height: 450px;
+    height: 420px;
     float: left;
     overflow: hidden;
     width: 100%;
@@ -677,3 +655,5 @@ height: 10em;
     margin-top: 250px;
   }
 }
+
+
