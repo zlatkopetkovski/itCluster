@@ -266,17 +266,23 @@ font-size:14px;
 
 }
 
+
+
 #cluster {
 	float:left;
 	overflow: hidden;
-	background-image: url('../images/krug.jpg');
-	background-size: cover;
+		
+background-size: cover;
 	background-position: center;
 	width: 100%;
 	position: relative;
-	height:410px;
-	
+		
 }
+
+
+
+
+
 
 #cluster::after{
   content: "";
