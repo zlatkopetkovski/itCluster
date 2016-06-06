@@ -544,9 +544,9 @@ font-size:14px;
         display:none;
     }
 
-  .navbar .pr, .navbar .pr1, .navbar .pr2{
-    width: 100%
-  }
+   .navbar .pr, .navbar .pr1, .navbar .pr2{
+        width: 100%
+   }
 }
 
 @media screen and (max-width: 640px) {
@@ -570,6 +570,7 @@ font-size:14px;
   }
   #zastonie .wrapper .left{
     visibility: hidden;
+    display: none;
     height: 0px;
   }
   #zastonie .wrapper .right{
