@@ -66,12 +66,15 @@
 }
 
 #ninja-slider div.content h3 {
-    color: #1C456E;
+    color: #fff;
     margin-top:0;
     margin-bottom:30px;
     font-size:3.3em;
     font-family: 'Roboto', sans-serif;
     font-weight:900;
+}
+.slider-inner ul {
+    padding-top: 60% !important;
 }
 #ninja-slider div.content img {
     float:right;
@@ -233,7 +236,7 @@
 }
 
 #ninja-slider1 div.content h3 {
-    color: #1C456E;
+    color: #fff;
     margin-top:0px;
     margin-bottom:30px;
     font-size:2em;
