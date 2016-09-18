@@ -1,0 +1,70 @@
+@media all and (max-width: 1024px){
+
+}
+
+@media all and (max-width: 900px){
+    .header {
+        visibility: visible;
+        position: absolute;
+    }
+    #ddmenu {
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+    .sliderBackground {
+        height: 500px;
+    }
+    #ninja-slider div.content {
+        font-size: 1em;
+    }
+    #ninja-slider div.content h3 {
+        font-size: 2em;
+    }
+    #ninja-slider div.content img {
+        display: none;
+    }
+    #ninja-slider-prev, #ninja-slider-next {
+        display: none;
+    }
+    .navbar .pr, .navbar .pr1, .navbar .pr2 {
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px){
+
+}
+
+@media all and (max-width: 640px){
+    .sliderBackground {
+        height: 300px;
+    }
+}
+
+@media all and (max-width: 480px){
+
+}

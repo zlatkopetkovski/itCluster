@@ -1,0 +1,766 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+nav ul {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+body {
+    color: #55565b;
+    line-height: 1.2em;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #05abdd;
+}
+
+.blue_button,
+.grey_button{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.blue_button,
+.grey_button:hover{
+    background: #05abdd;
+}
+.grey_button,
+.blue_button:hover{
+    background: #27282d;
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3{
+    font-size: 28px;
+}
+/***** line that is under teh title *****/
+.underline {
+    display: inline-block;
+    width: 70px;
+    height: 2px;
+    background: #05abdd;
+    margin: 20px auto;
+}
+.intro {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+}
+small{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #909193;
+    display: inline-block;
+    width: 100%;
+}
+input,
+button,
+textarea{
+ -webkit-appearance: none;
+    border:0 none;
+    box-shadow: none;
+    padding: 10px 0;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+header, footer{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+/******* the main wrapper ********/
+.wrapper{
+    width: 100%;
+    max-width: 780px;
+    margin:0 auto;
+    overflow: hidden;
+}
+section{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 45px 0;
+}
+
+
+/**** menu ***/
+
+.header {
+    visibility: hidden;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.header ul {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.header ul ul li {
+    font-size: 12px;
+    margin-left: 15px;
+    padding: 1.5px 1.5px;
+}
+.header ul li {
+    padding: 5px 5px;
+}
+.header li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.header li a:active .header li a:hover {
+    color: #84D9F5;
+}
+.header li a:hover {
+    background-color: #f4f4f4;
+}
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.header .logo img{
+    width: 40px;
+    height: 40px;
+}
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding: 26px 20px;
+    position: relative;
+    user-select: none;
+}
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 19px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+.header .menu-btn {
+    display: none;
+}
+.header .menu-btn:checked ~ .menu {
+    max-height: 1000px;
+    max-width: 250px;
+    background-color: #fff;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* main menu
+----------------------------*/
+#ddmenu {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center; /*Specify the alignment of the whole UL if UL is not width:100%;*/
+    letter-spacing: normal;
+    position: fixed; /*da bidi fiksirano, sekogas na ekran*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+}
+#ddmenu ul {
+    background: rgba(255, 255, 255, 0.65) none repeat scroll 0 0;
+    display: inline-block;
+    font-size: 0;
+    list-style: outside none none;
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 999999990;
+}
+#ddlogo{
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+#ddmenu .pic img{
+    width: 150px;
+    height: 150px;
+    margin-top: -5px;
+}
+#ddmenu .active {
+    color: #06A7D5;
+}
+#ddmenu li {
+    -moz-user-select: none;
+    color: #000000;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 46px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    transition: background-color 0.2s ease 0s;
+    vertical-align: middle;
+}
+#ddmenu .full-width {
+    position: static;
+}
+#ddmenu .over {
+    color: #06A7D5;
+    /*background-color:#205081;*/
+}
+#ddmenu .over.no-sub {
+}
+#ddmenu .top-heading {
+    font-weight: bold;
+    margin: 0 16px;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+}
+/* links of top-heading */
+#ddmenu a, #ddmenu a:link, #ddmenu a:hover {
+    color: inherit;
+}
+#ddmenu li:hover {
+    color: #06A7D5;
+}
+#ddmenu a:focus {
+    outline: 1px dotted #09F;
+}
+/* caret(arrow icon) */
+#ddmenu .caret {
+    color: inherit;
+    left: -12px;
+    width: 0;
+    height: 0;
+    overflow: hidden; /*for IE6*/
+    vertical-align: middle;
+    margin-bottom: 2px;
+    border-top: 4px solid; /*caret size is 4px now*/
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    display: inline-block;
+    position: relative;
+}
+/* sub-menu layout
+----------------------------*/
+#ddmenu .dropdown {
+    width: auto;
+    left: 0px;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-top: none;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #ccc \9; /*fallback for old IE*/
+}
+#ddmenu .full-width .dropdown {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#ddmenu .offset300 {
+    left: -300px;
+    right: auto;
+}
+#ddmenu .right-aligned {
+    left: auto;
+    right: 0px;
+}
+#ddmenu .over .dropdown {
+    display: block;
+}
+#ddmenu .dd-inner {
+    text-align: center;
+    padding: 20px;
+    margin: 16px;
+    background-color: #FFF;
+    white-space: nowrap;
+    font-size: 13px;
+}
+#ddmenu ul ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: auto;
+    background: none;
+    border: none;
+    display: block;
+    position: static;
+    z-index: 0;
+    border-radius: 0;
+}
+#ddmenu ul ul li {
+    font-size: 13px;
+    padding: 6px 0; /*It determines the line height*/
+    color: inherit;
+    line-height: 1;
+    margin: 0;
+    display: block;
+    position: static;
+    background: none;
+    border: none;
+    transition: none;
+    border-radius: 0;
+}
+
+/* links in sub menu
+----------------------------*/
+#ddmenu .dropdown a {
+    color: #000;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+#ddmenu .dropdown a:hover, #ddmenu .dropdown a:focus {
+    color: #06A7D5;
+    text-decoration: none;
+    /*color:#09F;*/
+}
+/* blocks within the sub-menu
+-----------------------------*/
+#ddmenu .column {
+    text-align: left;
+    vertical-align: top; /*or middle*/
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    white-space: normal;
+    width: auto;
+    min-width: 200px;
+    padding: 0 30px;
+    border-right: 1px solid #999;
+}
+#ddmenu .dd-inner ul:last-child {
+    border-right: none;
+}
+#ddmenu h3 {
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+#ddmenu div.column h3 {
+    text-transform: uppercase;
+}
+/* useful when http://www.menucool.com/ddmenu/one-menu-for-all-pages */
+#ddmenuLink {
+    display: none;
+}
+.hamburger {
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #fff;
+    border-bottom: 0.2em solid #fff;
+}
+.hamburger:before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #fff;
+}
+
+/***slider***/
+.sliderBackground {
+    overflow: hidden;
+    background-image: url('../images/Family-hug1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 660px;
+    width: 100%;
+}
+#ninja-slider {
+    width: 100%; 
+    /*max-width:900px;*/
+    /*min-width:375px;*/
+    /*background:#191919;*/
+    padding: 240px 0;
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+#ninja-slider .slider-inner {
+    margin: 0 auto;
+    font-size: 0px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#ninja-slider ul {
+    /*background-color:black;*/
+    position:relative;
+    list-style:none;
+    padding:0;
+    height: 100% !important;
+}
+#ninja-slider li {    
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    transform-style: preserve-3d; /*prevent blurry of its children*/
+}
+#ninja-slider li.ns-show {
+    opacity:1;
+}
+/*---------- Slide Content -------------------*/
+#ninja-slider div.content {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    padding:0 14%;
+    text-align:center;
+    color:#FFF;
+    font-size:1.2em;
+    line-height:1.2;
+    position: relative;
+    top: 25%;
+    box-sizing:border-box;
+}
+#ninja-slider div.content h3 {
+    color: #fff;
+    margin-top:0;
+    margin-bottom:30px;
+    font-size:3.3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+}
+.slider-inner ul {
+    padding-top: 60% !important;
+}
+#ninja-slider div.content img {
+    float:right;
+    width:30%;
+    margin:0 0 20px 20px;
+}
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider-pause-play { display:none;}    
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 50%;
+    margin-top:-51px;/*pager's height should also be counted*/
+    background-color:rgba(0,0,0,0.4);
+    background-color:#ccc\9;/*IE8 hack*/
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.4s;
+}
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+}
+#ninja-slider-prev {
+    left: 0px; /*set it with a positive value if .slider-inner does not have max-width setting.*/
+}
+#ninja-slider-next {
+    right: 0px;
+}
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    backface-visibility:hidden;
+}
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    left:14px;
+}
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    right:14px;
+}
+/*pagination num within the arrow buttons*/
+#ninja-slider-prev:hover, #ninja-slider-next:hover {width:80px;background-color:rgba(0,0,0,0.8);}
+#ninja-slider-prev div {margin-right:8px;white-space:nowrap;opacity:0;float:right;}
+#ninja-slider-next div {margin-left:8px;white-space:nowrap;opacity:0;float:left;}
+#ninja-slider-prev:hover div, #ninja-slider-next:hover div {opacity:1;}
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager { display:none;}
+
+
+#ninja-slider1 {
+    width: 100%; 
+    /*max-width:900px;*/
+    /*min-width:375px;*/
+    /*background:#191919;*/
+    padding: 210px 0;
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider1 .slider-inner {
+    margin: 0 auto;
+    font-size: 0px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    width: 100%;
+    height: 200px;
+}
+
+#ninja-slider1 ul {
+    /*background-color:black;*/
+    position:relative;
+    list-style:none;
+    padding:0;
+    height: 100% !important;
+}
+
+#ninja-slider1 li {    
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    transform-style: preserve-3d; /*prevent blurry of its children*/
+}
+
+#ninja-slider1 li.ns-show {
+    opacity:1;
+}
+
+
+/*---------- Slide Content -------------------*/
+#ninja-slider1 div.content {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    padding:0 12%;
+    text-align:center;
+    color:#FFF;
+    font-size:1.2em;
+    line-height:1.2;
+    position: relative;
+    top: 15%;
+    box-sizing:border-box;
+}
+
+#ninja-slider1 div.content h3 {
+    color: #fff;
+    margin-top:0px;
+    margin-bottom:30px;
+    font-size:2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+}
+#ninja-slider1 div.content img {
+    float:right;
+    width:20%;
+    margin:0 0 20px 20px;
+}
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider1-pause-play { display:none;}    
+
+#ninja-slider1-prev, #ninja-slider1-next
+{
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 60%;
+    margin-top:-51px;/*pager's height should also be counted*/
+    background-color:rgba(0,0,0,0.4);
+    background-color:#ccc\9;/*IE8 hack*/
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.4s;
+}
+
+.slider-inner:hover #ninja-slider1-prev, .slider-inner:hover #ninja-slider1-next {
+    opacity:1;
+}
+
+
+#ninja-slider1-prev {
+    left: 0px; /*set it with a positive value if .slider-inner does not have max-width setting.*/
+}
+#ninja-slider1-next {
+    right: 0px;
+}
+
+/* arrows */
+#ninja-slider1-prev::before, #ninja-slider1-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider1-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    left:14px;
+}
+
+#ninja-slider1-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    right:14px;
+}
+
+
+/*pagination num within the arrow buttons*/
+#ninja-slider1-prev:hover, #ninja-slider1-next:hover {width:80px;background-color:rgba(0,0,0,0.8);}
+#ninja-slider1-prev div {margin-right:8px;white-space:nowrap;opacity:0;float:right;}
+#ninja-slider1-next div {margin-left:8px;white-space:nowrap;opacity:0;float:left;}
+#ninja-slider1-prev:hover div, #ninja-slider1-next:hover div {opacity:1;}
+
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider1-pager { display:none;}
